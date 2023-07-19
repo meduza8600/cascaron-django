@@ -23,51 +23,8 @@
 <!--contacto-->
 <section id="contact" class="wow fadeIn" data-wow-duration="2s" data-wow-delay="3s"
          style="background-image: url({% static 'img/fondo-prueba-1.png'%}); background-size: cover; background-position: center">
-    <h1>Contacto </h1>
-    <div class="form-control-custom">
-        <form id="contacto" role="form" class="was-validated pb-3">
-            {% csrf_token %}
-            <div class="mx-3 my-3">
-                <label for="form_name" class="form-label">Nombre*:</label>
-                <input type="text" class="form-control" id="form_name" placeholder="" name="form_name" required>
-                <div class="valid-feedback">Válido.</div>
-                <div class="invalid-feedback">Rellene este campo obligatorio.</div>
-            </div>
-            <div class="mx-3 my-3">
-                <label for="form_email" class="form-label">Correo*:</label>
-                <input type="email" class="form-control required email" id="form_email" placeholder="Enter email"
-                       name="form_email" required>
-                <div class="valid-feedback">Válido.</div>
-                <div class="invalid-feedback">Rellene este campo obligatorio.</div>
-            </div>
-            <div class="mx-3 my-3">
-                <label for="comment">Mensaje*:</label>
-                <textarea class="form-control textarea required" rows="5" id="comment" name="text" required></textarea>
-                <div class="valid-feedback">Válido.</div>
-                <div class="invalid-feedback">Rellene este campo obligatorio.</div>
-            </div>
-            <div class="form-check mx-3 my-3">
-                <input class="form-check-input" type="checkbox" id="myCheck" name="remember" required>
-                <label class="form-check-label" for="myCheck">Acepto la política de privacidad*.</label>
-                <div class="valid-feedback">Válido.</div>
-                <div class="invalid-feedback">Marque este checkbox para continuar.</div>
-            </div>
-            <div class="button-holder mx-3 my-3">
-                <!--                <p class="obligatorio">Los campos marcados con asterisco (*) son-->
-                <!--                    obligatorios</p>-->
-                <input class="field"
-                       id="_Contactoportlet_WAR_contactoportlet_acceptLegalConditions"
-                       name="_Contactoportlet_WAR_contactoportlet_acceptLegalConditions"
-                       type="hidden"
-                       value="true">
-                <button class="btn btn-primary" type="submit"
-                        title="contactForm.button.send"
-                        id="enviar">
-                    Enviar
-                </button>
-            </div>
-        </form>
-    </div>
+    {% include 'partials/contactos.html' %}
+
 </section>
 
 <script>

@@ -1,0 +1,204 @@
+/******** custom scss from swiper slider v ******/
+/** Copyright 2023 The Meduz@ Authors **/
+
+
+//include variables from bootstrap v5
+//@import "b5/_variables";
+
+//slider del index
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+
+#home {
+
+  .swiper-slide {
+    font-size: 18px;
+    color: #000000;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 40px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column !important;
+
+    .title {
+      font-size: 41px;
+      font-weight: 300;
+    }
+
+    .title2 {
+      line-height: 1.3;
+      max-width: 60%;
+    }
+
+    .subtitle {
+      font-size: 21px;
+    }
+
+    .text {
+      font-size: 14px;
+      max-width: 60%;
+      line-height: 1.3;
+    }
+  }
+}
+
+#us {
+  //position: relative;
+
+
+  .swiper-container {
+    margin-top: 2em; /* minor cosmetic */
+  }
+
+
+  .swiper-navigation-custom {
+    //width: 120%;
+    //transform: translate(0, 0);
+
+    //.swiper-custom-nav {
+    //  position: relative;
+    //}
+  }
+
+
+  .swiper {
+    width: 90%;
+    background: transparent;
+  }
+
+  .swiper-wrapper {
+    width: 85%;
+
+  }
+
+
+  .swiper-slide {
+    text-align: center;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50px;
+    height: 280px;
+    border: 2px;
+
+
+    .title {
+      font-size: 20px;
+      font-weight: 300;
+    }
+
+
+    .subtitle {
+      font-size: 14px;
+    }
+
+
+  }
+
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+  .swiper-navigation-custom{
+    position: absolute;
+    z-index: 30;
+  }
+  .swiper-custom-nav{
+    top: -5%;
+  }
+
+  .swiper-button-next, .swiper-button-prev {
+    color: #000;
+  }
+
+
+  .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after, .swiper-button-next::after, .swiper-rtl .swiper-button-prev::after {
+    content: ''
+  }
+
+
+}
+
+.parallax-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+
+  .swiper-wrapper {
+    width: 80%;
+  }
+
+  .mySwiper {
+    height: 278px;
+  }
+
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+
+  #swiper-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 92%;
+
+    /* make room for arrows */
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+
+
+  .swiper-button-prev, .swiper-button-next {
+    /* show on larger viewports */
+    display: flex;
+  }
+
+
+  .mySwiper {
+    height: 500px;
+  }
+
+
+  .swiper-contact {
+    height: 280px;
+  }
+
+
+}
+
+//// Large devices (desktops, 992px and up)
+//@media (min-width: 992px) { ... }
+//
+//// X-Large devices (large desktops, 1200px and up)
+//@media (min-width: 1200px) { ... }
+//
+//// XX-Large devices (larger desktops, 1400px and up)
+//@media (min-width: 1400px) { ... }

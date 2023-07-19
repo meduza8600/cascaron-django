@@ -1,0 +1,67 @@
+/*!
+ * cerebrum theme for Bootstrap v5.0.2 (https://getbootstrap.com/)
+ * Copyright 2023 The Meduz@ Authors
+ *
+ */
+
+// Required
+@import "b5/_functions";
+
+// Default variable overrides
+$blue:#006699;
+$primary: $blue;
+
+
+
+$theme-colors: (
+  "primary": $primary,
+);
+
+// Required
+// Configuration
+//@import "b5/_functions";
+@import "b5/_variables";
+@import "b5/_mixins";
+@import "b5/_utilities";
+
+// Layout & components
+@import "b5/_root";
+@import "b5/_reboot";
+@import "b5/_type";
+@import "b5/_images";
+@import "b5/_containers";
+@import "b5/_grid";
+@import "b5/_tables";
+@import "b5/_forms";
+@import "b5/_buttons";
+@import "b5/_transitions";
+@import "b5/_dropdown";
+@import "b5/_button-group";
+@import "b5/_nav";
+@import "b5/_navbar";
+@import "b5/_card";
+@import "b5/_accordion";
+@import "b5/_breadcrumb";
+@import "b5/_pagination";
+@import "b5/_badge";
+@import "b5/_alert";
+@import "b5/_progress";
+@import "b5/_list-group";
+@import "b5/_close";
+@import "b5/_toasts";
+@import "b5/_modal";
+@import "b5/_tooltip";
+@import "b5/_popover";
+@import "b5/_carousel";
+@import "b5/_spinners";
+@import "b5/_offcanvas";
+
+// Helpers
+@import "b5/_helpers";
+
+// Utilities
+@import "b5/utilities/_api";
+// scss-docs-end import-stack
+
+  /* scroll to top */
+    .scroll-top-arrow {display: none !important; opacity: 0 !important}

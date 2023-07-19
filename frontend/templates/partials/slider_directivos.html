@@ -1,0 +1,85 @@
+{% load i18n %}
+{% load static %}
+<!-- Demo styles -->
+<style>
+    /*needs part of css in style.css #logos-section */
+</style>
+
+<h1>Nuestro equipo</h1>
+    <div class="d-flex flex-row align-items-center">
+        <div id="js-prev1" class=".swiper-button-prev swiper-custom-nav">
+            <i class="fas fa-arrow-alt-circle-left fa-2x"></i>
+        </div>
+        <div class="swiper swiper-contact swiper-container">
+            <div class="parallax-bg"></div>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"
+                     style="background-image: url({% static 'img/directivos/silueta-directivo.png' %}); background-position: center; background-size: cover">
+                    <div class="title">Directivo Apellidos</div>
+                    <div class="subtitle">Cargo</div>
+                </div>
+                <div class="swiper-slide"
+                     style="background-image: url({% static 'img/directivos/silueta-directivo.png' %}); background-position: center; background-size: cover">
+                    <div class="title">Directivo Apellidos</div>
+                    <div class="subtitle">Cargo</div>
+                </div>
+                <div class="swiper-slide"
+                     style="background-image: url({% static 'img/directivos/silueta-directivo.png' %}); background-position: center; background-size: cover">
+                    <div class="title">Directivo Apellidos</div>
+                    <div class="subtitle">Cargo</div>
+                </div>
+                <div class="swiper-slide"
+                     style="background-image: url({% static 'img/directivos/silueta-directivo.png' %}); background-position: center; background-size: cover">
+                    <div class="title">Directivo Apellidos</div>
+                    <div class="subtitle">Cargo</div>
+                </div>
+                <div class="swiper-slide"
+                     style="background-image: url({% static 'img/directivos/silueta-directivo.png' %}); background-position: center; background-size: cover">
+                    <div class="title">Directivo Apellidos</div>
+                    <div class="subtitle">Cargo</div>
+                </div>
+                <div class="swiper-slide"
+                     style="background-image: url({% static 'img/directivos/silueta-directivo.png' %}); background-position: center; background-size: cover">
+                    <div class="title">Directivo Apellidos</div>
+                    <div class="subtitle">Cargo</div>
+                </div>
+                <div class="swiper-slide"
+                     style="background-image: url({% static 'img/directivos/silueta-directivo.png' %}); background-position: center; background-size: cover">
+                    <div class="title">Directivo Apellidos</div>
+                    <div class="subtitle">Cargo</div>
+                </div>
+                <div class="swiper-slide"
+                     style="background-image: url({% static 'img/directivos/silueta-directivo.png' %}); background-position: center; background-size: cover">
+                    <div class="title">Directivo Apellidos</div>
+                    <div class="subtitle">Cargo</div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div id="js-next1" class=".swiper-button-next swiper-custom-nav">
+            <i class="fas fa-arrow-alt-circle-right fa-2x"></i>
+        </div>
+    </div>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        speed: 600,
+        parallax: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+
+    });
+</script>

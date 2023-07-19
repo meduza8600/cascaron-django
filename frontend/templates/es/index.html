@@ -1,0 +1,281 @@
+{% extends 'layouts/base.html' %}
+{% load i18n %}
+{% load static %}
+{% block otherstyles %}
+<style>
+
+    /* Vinculacion-ODS */
+</style>
+{% endblock %}
+{% block contenido %}
+<!--inicio-->
+<section id="home">
+    {% include 'partials/slider_index.html' %}
+</section>
+<section id="logos-section" class="wow fadeIn" data-wow-duration="2s" data-wow-delay="3s">
+    <div id="logos-hover" class="row">
+        <div class="col-md-3 bbw brw ">
+            <div class="logo-hover-portada">
+                <figure>
+                    <img class="logo-hover img-fluid" src="{% static 'img/logos/logo-irdesign.png'%}">
+                </figure>
+                <div class="logo-hover-contenido">
+                    <h3 class="logo-title">Cerebrum </h3>
+                    <img class="logo-hover img-fluid" src="{% static 'img/logos/logo-irdesign.png'%}">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 bbw brw">
+            <div class="logo-hover-portada">
+                <figure>
+                    <img class="logo-hover img-fluid" src="{% static 'img/logos/logo-irstrat.png'%}">
+                </figure>
+                <div class="logo-hover-contenido">
+                    <h3 class="logo-title">IRStrat </h3>
+                    <img class="logo-hover img-fluid" src="{% static 'img/logos/logo-irstrat.png'%}">
+                    <a class="btn btn-success" href="https://www.irstrat.com/">IR A LA WEB</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 bbw brw">
+            <div class="logo-hover-portada">
+                <figure>
+                    <img class="logo-hover img-fluid" src="{% static 'img/logos/orbexmedia-logo.svg'%}">
+                </figure>
+                <div class="logo-hover-contenido">
+                    <h3 class="logo-title">Orbex Media </h3>
+                    <img class="logo-hover img-fluid" src="{% static 'img/logos/orbexmedia-logo.svg'%}">
+                    <a class="btn btn-success" href="https://www.orbexmedia.com/">IR A LA WEB</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 bbw">
+            <div class="logo-hover-portada">
+                <figure>
+                    <img class="logo-hover img-fluid" src="{% static 'img/logos/logo-apalache-estructuracion.png'%}">
+                </figure>
+                <div class="logo-hover-contenido">
+                    <h3 class="logo-title">Apalache Estructuración </h3>
+                    <img class="logo-hover img-fluid" src="{% static 'img/logos/logo-apalache-estructuracion.png'%}">
+                    <a class="btn btn-success" href="https://www.apalache.mx/">IR A LA WEB</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 brw">
+            <div class="logo-hover-portada">
+                <figure>
+                    <img class="logo-hover img-fluid" src="{% static 'img/logos/logo-vert.png'%}">
+                </figure>
+                <div class="logo-hover-contenido">
+                    <h3 class="logo-title">Vert </h3>
+                    <img class="logo-hover img-fluid" src="{% static 'img/logos/logo-vert.png'%}">
+                    <a class="btn btn-success" href="https://www.vertds.com/">IR A LA WEB</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 brw">
+            <div class="logo-hover-portada">
+                <figure>
+                    <img class="logo-hover img-fluid" src="{% static 'img/logos/logo-irdesign.png'%}">
+                </figure>
+                <div class="logo-hover-contenido">
+                    <h3 class="logo-title">IRDesign </h3>
+                    <img class="logo-hover img-fluid" src="{% static 'img/logos/logo-irdesign.png'%}">
+                    <a class="btn btn-success" href="https://www.irdesign.mx/">IR A LA WEB</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 brw">
+            <div class="logo-hover-portada">
+                <figure>
+                    <img class="logo-hover img-fluid" src="{% static 'img/logos/logo-irdesign.png'%}">
+                </figure>
+                <div class="logo-hover-contenido">
+                    <h3 class="logo-title">Zamná </h3>
+                    <img class="logo-hover img-fluid" src="{% static 'img/logos/logo-irdesign.png'%}">
+                    <a class="btn btn-success" href="https://www.irdesign.mx/">IR A LA WEB</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="logo-hover-portada">
+                <figure>
+                    <img class="logo-hover img-fluid" width="150"
+                         src="{% static 'img/logos/logo-apalache-analisis.svg'%}">
+                </figure>
+                <div class="logo-hover-contenido">
+                    <h3 class="logo-title">Apalache Análisis </h3>
+                    <img class="logo-hover img-fluid" src="{% static 'img/logos/logo-apalache-analisis.svg'%}">
+                    <a class="btn btn-success" href="https://analisis.apalache.mx/">IR A LA WEB</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--nosotros-->
+<section id="us" class="wow fadeIn" data-wow-duration="2s" data-wow-delay="3s">
+    <h1>Nuestro equipo</h1>
+    <div class="d-flex flex-row align-items-center">
+        <div id="js-prev1" class=".swiper-button-prev swiper-custom-nav">
+            <i class="fas fa-arrow-alt-circle-left fa-2x"></i>
+        </div>
+        <div class="swiper swiper-contact swiper-container">
+            <div class="parallax-bg"></div>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"
+                     style="background-image: url({% static 'img/directivos/silueta-directivo.png' %}); background-position: center; background-size: cover">
+                    <div class="title">Directivo Apellidos</div>
+                    <div class="subtitle">Cargo</div>
+                </div>
+                <div class="swiper-slide"
+                     style="background-image: url({% static 'img/directivos/silueta-directivo.png' %}); background-position: center; background-size: cover">
+                    <div class="title">Directivo Apellidos</div>
+                    <div class="subtitle">Cargo</div>
+                </div>
+                <div class="swiper-slide"
+                     style="background-image: url({% static 'img/directivos/silueta-directivo.png' %}); background-position: center; background-size: cover">
+                    <div class="title">Directivo Apellidos</div>
+                    <div class="subtitle">Cargo</div>
+                </div>
+                <div class="swiper-slide"
+                     style="background-image: url({% static 'img/directivos/silueta-directivo.png' %}); background-position: center; background-size: cover">
+                    <div class="title">Directivo Apellidos</div>
+                    <div class="subtitle">Cargo</div>
+                </div>
+                <div class="swiper-slide"
+                     style="background-image: url({% static 'img/directivos/silueta-directivo.png' %}); background-position: center; background-size: cover">
+                    <div class="title">Directivo Apellidos</div>
+                    <div class="subtitle">Cargo</div>
+                </div>
+                <div class="swiper-slide"
+                     style="background-image: url({% static 'img/directivos/silueta-directivo.png' %}); background-position: center; background-size: cover">
+                    <div class="title">Directivo Apellidos</div>
+                    <div class="subtitle">Cargo</div>
+                </div>
+                <div class="swiper-slide"
+                     style="background-image: url({% static 'img/directivos/silueta-directivo.png' %}); background-position: center; background-size: cover">
+                    <div class="title">Directivo Apellidos</div>
+                    <div class="subtitle">Cargo</div>
+                </div>
+                <div class="swiper-slide"
+                     style="background-image: url({% static 'img/directivos/silueta-directivo.png' %}); background-position: center; background-size: cover">
+                    <div class="title">Directivo Apellidos</div>
+                    <div class="subtitle">Cargo</div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div id="js-next1" class=".swiper-button-next swiper-custom-nav">
+            <i class="fas fa-arrow-alt-circle-right fa-2x"></i>
+        </div>
+    </div>
+
+</section>
+<!--contacto-->
+<section id="contact" class="wow fadeIn" data-wow-duration="2s" data-wow-delay="3s"
+         style="background-image: url({% static 'img/fondo-prueba-1.png'%}); background-size: cover; background-position: center">
+    <h1>Contacto </h1>
+    <div class="form-control-custom">
+        <form id="contacto" role="form" class="was-validated pb-3">
+            {% csrf_token %}
+            <div class="mx-3 my-3">
+                <label for="form_name" class="form-label">Nombre*:</label>
+                <input type="text" class="form-control" id="form_name" placeholder="" name="form_name" required>
+                <div class="valid-feedback">Válido.</div>
+                <div class="invalid-feedback">Rellene este campo obligatorio.</div>
+            </div>
+            <div class="mx-3 my-3">
+                <label for="form_email" class="form-label">Correo*:</label>
+                <input type="email" class="form-control required email" id="form_email" placeholder="Enter email"
+                       name="form_email" required>
+                <div class="valid-feedback">Válido.</div>
+                <div class="invalid-feedback">Rellene este campo obligatorio.</div>
+            </div>
+            <div class="mx-3 my-3">
+                <label for="comment">Mensaje*:</label>
+                <textarea class="form-control textarea required" rows="5" id="comment" name="text" required></textarea>
+                <div class="valid-feedback">Válido.</div>
+                <div class="invalid-feedback">Rellene este campo obligatorio.</div>
+            </div>
+            <div class="form-check mx-3 my-3">
+                <input class="form-check-input" type="checkbox" id="myCheck" name="remember" required>
+                <label class="form-check-label" for="myCheck">Acepto la política de privacidad*.</label>
+                <div class="valid-feedback">Válido.</div>
+                <div class="invalid-feedback">Marque este checkbox para continuar.</div>
+            </div>
+            <div class="button-holder mx-3 my-3">
+                <!--                <p class="obligatorio">Los campos marcados con asterisco (*) son-->
+                <!--                    obligatorios</p>-->
+                <input class="field"
+                       id="_Contactoportlet_WAR_contactoportlet_acceptLegalConditions"
+                       name="_Contactoportlet_WAR_contactoportlet_acceptLegalConditions"
+                       type="hidden"
+                       value="true">
+                <button class="btn btn-primary" type="submit"
+                        title="contactForm.button.send"
+                        id="enviar">
+                    Enviar
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<script>
+    var swiper = new Swiper(".swiper-contact", {
+        slidesPerView: 4,
+        speed: 600,
+        parallax: true,
+        loop: true,
+        grabCursor: true,
+        spaceBetween: 1,
+        breakpoints: {
+            1181: {
+                slidesPerView: 4
+            },
+            1180: {
+                slidesPerView: 3
+            },
+            1020: {
+                slidesPerView: 2
+            },
+            700: {
+                slidesPerView: 1
+            }
+        },
+        // centeredSlides: true,
+        // autoplay: {
+        //     delay: 2500,
+        //     disableOnInteraction: false,
+        // },
+        // pagination: {
+        //     el: ".swiper-pagination",
+        //     type: "progressbar",
+        // },
+        navigation: {
+            nextEl: "#js-next1",
+            prevEl: "#js-prev1",
+        },
+
+    });
+    var wow = new WOW(
+        {
+            boxClass: 'wow',      // animated element css class (default is wow)
+            animateClass: 'animated', // animation css class (default is animated)
+            offset: 0,          // distance to the element when triggering the animation (default is 0)
+            mobile: true,       // trigger animations on mobile devices (default is true)
+            live: true,       // act on asynchronously loaded content (default is true)
+            callback: function (box) {
+                // the callback is fired every time an animation is started
+                // the argument that is passed in is the DOM node being animated
+            },
+            scrollContainer: null,    // optional scroll container selector, otherwise use window,
+            resetAnimation: true,     // reset animation on end (default is true)
+        }
+    );
+    wow.init();
+    // new WOW().init();
+</script>
+{% endblock %}

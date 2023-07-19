@@ -1,0 +1,87 @@
+{% load i18n %}
+{% load static %}
+<!-- Demo styles -->
+
+
+<div id="slider-index" style="--swiper-navigation-color: #000; --swiper-pagination-color: #000" class="swiper mySwiper">
+    <div class="parallax-bg" style="
+          background-image: url({% static 'img/home_1.png' %});
+        " data-swiper-parallax="-23%"></div>
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="title title2" data-swiper-parallax="-300">Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Aliquam
+                dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+                laoreet justo vitae porttitor porttitor
+            </div>
+            <!--        <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>-->
+            <!--        <div class="text" data-swiper-parallax="-100">-->
+            <!--          <p>-->
+            <!--            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam-->
+            <!--            dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla-->
+            <!--            laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.-->
+            <!--            Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.-->
+            <!--            Aliquam hendrerit lorem at elit facilisis rutrum. Ut at-->
+            <!--            ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,-->
+            <!--            tincidunt ut libero. Aenean feugiat non eros quis feugiat.-->
+            <!--          </p>-->
+            <!--        </div>-->
+        </div>
+        <div class="swiper-slide">
+            <div class="title" data-swiper-parallax="-300">Slide 2</div>
+            <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+            <div class="text" data-swiper-parallax="-100">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                    dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+                    laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+                    Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+                    Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+                    ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+                    tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+                </p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="title" data-swiper-parallax="-300">Slide 3</div>
+            <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+            <div class="text" data-swiper-parallax="-100">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                    dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+                    laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+                    Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+                    Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+                    ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+                    tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+</div>
+
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        speed: 600,
+        parallax: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+
+    });
+</script>

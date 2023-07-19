@@ -1,0 +1,92 @@
+{% load change_languaje %}
+{% load static %}
+{% load i18n %}
+<!doctype html>
+<html class="no-js" lang="es">
+<head>
+    <!-- title -->
+    <title>{{ meta_title }}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1"/>
+    <meta name="author" content="ThemeZaa">
+    <!-- description -->
+    <meta name="description"
+          content="{% trans 'site-name' %}">
+    <!-- keywords -->
+    <meta name="keywords"
+          content="{% trans 'keywords'%}">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}">
+    <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon-57x57.png' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'img/apple-touch-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'img/apple-touch-icon-114x114.png' %}">
+    <!-- style sheets and font icons  -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/meduz@-bootstrap-v5-theme.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-icons.min.css' %}">
+<!--    <link rel="stylesheet" type="text/css" href="{% static 'css/rs-plugin/settings.css' %}"/>-->
+<!--    <link rel="stylesheet" type="text/css" href="{% static 'css/rs-plugin/layers.css' %}"/>-->
+<!--    <link rel="stylesheet" type="text/css" href="{% static 'css/rs-plugin/navigation.css' %}"/>-->
+<!--    <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.min.css' %}{{ css_js_version }}"/>-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/swiper-bundle.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/swiper-custom.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animate.min.css' %}">
+<!--    <link rel="stylesheet" type="text/css" href="{% static 'css/fontawesome.min.css' %}">-->
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+
+
+    {% block otherstyles %}
+    {% endblock %}
+
+    <script type="text/javascript" src="{% static 'js/jquery_v3.3.1.js' %}"></script>
+<!--    <script type="text/javascript" src="{% static 'js/plugins.min.js' %}"></script>-->
+<!--    <script type="text/javascript" src="{% static 'js/functions.min.js' %}"></script>-->
+    <script type="text/javascript" src="{% static 'js/b5/bootstrap.js' %}"></script>
+<!--    <script type="text/javascript" src="{% static 'js/fontawesome.min.js' %}"></script>-->
+<!--    <script type="text/javascript" src="{% static 'js/revolution.min.js' %}"></script>-->
+    <!-- setting -->
+<!--    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>-->
+    <script type="text/javascript" src="{% static 'js/swiper-bundle.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/wow.min.js' %}"></script>
+
+</head>
+<body>
+<!-- start header -->
+{% block header %}
+{% include 'partials/header.html' %}
+{% endblock %}
+<!-- end header -->
+<!-- start parallax hero section -->
+
+<!-- <button class="float d-none d-md-block showRightPush" id="showRightPush">
+    Customer Launch
+</button> -->
+<main class="">
+    {% block contenido %}
+
+    {% endblock %}
+</main>
+
+<!-- start footer -->
+{% block footer %}
+{% include 'partials/footer.html' %}
+{% endblock %}
+
+<!-- end footer -->
+<!-- start scroll to top -->
+<a class="scroll-top-arrow" href="javascript:void(0);"><i class="fa fa-arrow-up"></i></a>
+<!-- end scroll to top -->
+<!-- javascript -->
+<!--<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>-->
+<!--<script type="text/javascript" src="{% static 'js/jquery_v3.3.1.js' %}"></script>-->
+<!--<script type="text/javascript" src="{% static 'js/plugins.min.js' %}"></script>-->
+<!--<script type="text/javascript" src="{% static 'js/functions.min.js' %}"></script>-->
+<!--<script type="text/javascript" src="{% static 'js/b5/bootstrap.js' %}"></script>-->
+<!--&lt;!&ndash; setting &ndash;&gt;-->
+<!--<script type="text/javascript" src="{% static 'js/main.js' %}"></script>-->
+{% block otherscripts %}
+{% endblock %}
+</body>
+</html>

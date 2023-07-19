@@ -1,0 +1,136 @@
+{% load i18n %}
+{% load static %}
+<!-- Demo styles -->
+<style>
+    /*needs part of css in style.css #logos-section */
+</style>
+  <article class="parallax p-5" style="background-image: url({% static 'img/parallax/1.jpg' %});">
+        <div class='container-fluid container-relative text-white'>
+            <h1 class="text-white text-center" style="color: #35ABED;">
+                Cifras Relevantes
+            </h1>
+            <div class='row align-items-center finn-counto' id="wprt-counter-index">
+                <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+                    <div class="feature-card wprt-counter">
+                        <div class="feature-card-content superior justify-content-center">
+                            <div class="feature-card-title text-uppercase text-center container text-white">
+
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                    <span class="feature-card-desc number" data-speed="1500"
+                                          data-to="49.779"
+                                          data-decimals="3"></span>
+                            </div>
+                            <h3 class="feature-card-title text-uppercase text-center container text-white mb-0">
+                                <b>Lorem ipsum dolor. (M<sup>3</sup>)</b>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+                    <div class="feature-card wprt-counter">
+                        <div class="feature-card-content superior justify-content-center">
+                            <div class="feature-card-title text-uppercase text-center container text-white">
+
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                    <span class="feature-card-desc number" data-speed="1500"
+                                          data-to="40"
+                                          data-decimals="0"></span>
+                            </div>
+                            <h3 class="feature-card-title text-uppercase text-center container text-white mb-0">
+                                <b>Lorem ipsum dolor.</b>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+                    <div class="feature-card wprt-counter">
+                        <div class="feature-card-content superior justify-content-center">
+                            <div class="feature-card-title text-uppercase text-center container text-white">
+
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                    <span class="feature-card-desc number percent" data-format="%" data-speed="1500"
+                                          data-to="93"
+                                          data-decimals="0"></span>
+                            </div>
+                            <h3 class="feature-card-title text-uppercase text-center container text-white mb-0">
+                                <b>Lorem ipsum dolor.</b>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+                    <div class="feature-card wprt-counter">
+                        <div class="feature-card-content superior justify-content-center">
+                            <div class="feature-card-title text-uppercase text-center container text-white">
+
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                    <span class="feature-card-desc number percent" data-format="%" data-speed="1500"
+                                          data-to="55"
+                                          data-decimals="0"></span>
+                            </div>
+                            <h3 class="feature-card-title text-uppercase text-center container text-white mb-0">
+                                <b>Lorem ipsum dolor.</b>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </article>
+
+<script src="{% static 'js/countTo.js' %}"></script>
+
+<script>
+  function isScrolledIntoView(el) {
+        if (el != null) {
+            var elemTop = el.getBoundingClientRect().top;
+            var elemBottom = el.getBoundingClientRect().bottom;
+
+            var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+            return isVisible;
+        }
+    }
+
+    $(window).scroll(function () {
+        let countto = $('.finn-counto');
+        // console.log(countto);
+        countto.each(function () {
+            // console.log('entro each 1');
+            // console.log(this);
+
+            if (isScrolledIntoView(this)) {
+                // console.log('entro isScrolledIntoView');
+                // console.log(this);
+                $(this).find('.number').each(function () {
+                    // console.log('entro find');
+                    // console.log(this);
+                    var to = parseFloat($(this).data('to')),
+                        speed = parseInt($(this).data('speed')),
+                        decimals = parseInt($(this).data('decimals'));
+
+                    $(this).countTo({
+                        to: to,
+                        speen: speed,
+                        decimals: decimals,
+                        formatter: function (value, options) {
+                            return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+                            ;
+                        },
+                        onComplete: function (value) {
+                            if (value === 93)
+                                return this.innerHTML += '%';
+                        }
+
+                    });
+                });
+                // Unbind scroll event
+                // $(window).off('scroll');
+            }
+        })
+    });
+</script>

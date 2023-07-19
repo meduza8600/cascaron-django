@@ -10,8 +10,8 @@ $light-blue: #99CCFF !default;
 $active-link: $white;
 $active-link-actived: $light-blue;
 
-$green:   #198754 !default;
-$success:       $green !default;
+$green: #198754 !default;
+$success: $green !default;
 
 //header
 .logo-menu {
@@ -38,6 +38,15 @@ main {
       color: $active-link-actived !important;
     }
   }
+}
+
+//countto
+.countto {
+  .feature-card-desc {
+    font-size: 60px;
+    font-weight: 700;
+  }
+
 }
 
 //logos-hover
@@ -123,27 +132,32 @@ main {
     }
   }
 }
-#us{
-    padding: 3rem 3rem;
+
+#us {
+  padding: 3rem 3rem;
 }
 
-#contact{
+#contact {
   color: $white;
-  h1{
+
+  h1 {
     //color: $white;
     text-align: center;
   }
-  .form-control-custom{
+
+  .form-control-custom {
     width: 75%;
     padding: 0 3rem;
     align-items: center;
   }
-  .btn{
+
+  .btn {
     color: $black;
     background-color: $white;
     border: 0;
   }
 }
+
 //footer
 footer {
   background-color: $black;

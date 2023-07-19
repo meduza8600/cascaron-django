@@ -1,0 +1,145 @@
+{% load i18n %}
+{% load static %}
+<!-- Demo styles -->
+<link rel="stylesheet" href="{% static 'js/fullcalendar/lib/main.css' %}">
+
+<style>
+    .repo-left {
+        background-color: #f2f2f2;
+        padding: 100px;
+        border-top: 4px solid #003057;
+        height: 350px;
+    }
+    .calendar-right {
+        background-color: #f2f2f2;
+        border-top: 4px solid #939598;
+        border-left: 2px solid #fff;
+        height: 350px;
+    }
+
+    table {
+        margin-bottom: unset;
+        overflow: hidden !important;
+    }
+
+    .fc-daygrid-day-events {
+        min-height: initial !important;
+    }
+
+    #calendar > .fc-header-toolbar {
+        margin-bottom: 0.5em;
+    }
+
+    #calendar {
+        width: 70%;
+        margin: 0 auto;
+        font-size: 10px;
+    }
+
+    .fc-daygrid-day-top {
+        justify-content: center;
+    }
+
+    #calendar .fc-scroller.fc-scroller-liquid-absolute {
+        overflow: hidden !important;
+    }
+
+    #calendar a.fc-daygrid-day-number {
+        z-index: 0 !important;
+    }
+
+    #reportes .first {
+        background-color: grey;
+        border-right: 8px solid #EB8705;
+    }
+
+    #reportes .first h3 {
+        color: white;
+    }
+
+    #reportes i {
+        color: #EB8705;
+    }
+
+    #reportes p {
+        margin-bottom: 0;
+    }
+
+    @media (min-width: 320px) and (max-width: 480px) {
+        #calendar {
+            width: 100%;
+        }
+
+        #calendar .fc-col-header {
+            width: 100% !important;
+        }
+
+        .calendar-right {
+            margin-top: 15px;
+        }
+    }
+</style>
+<div class="row justify-content-center align-items-center row-eq-height">
+    <div class=" col-md-6 repo-left">
+        <h3 class="text-center text-dark my-2 text-uppercase font-weight-bold">
+            Lorem ipsum dolor.
+        </h3>
+        <div class="d-flex flex-column py-1">
+            <a target="_blank"
+               href="#"
+               class="text-center">
+                <i class="fa fa-file-text fa-3x mb-3"></i>
+                <p class="mb-0">Lorem ipsum.</p>
+            </a>
+        </div>
+    </div>
+    <div class=" col-md-6 calendar-right">
+        <h3 class="text-center my-3 text-dark text-uppercase font-weight-bold">Calendario</h3>
+        <div id='calendar'></div>
+    </div>
+</div>
+
+<script src="{% static 'js/fullcalendar/lib/main.js' %}"></script>
+<script src="{% static 'js/fullcalendar/lib/locales-all.js' %}"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var calendarEl = document.getElementById('calendar');
+        if (calendarEl != null) {
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                eventDidMount: function (info) {
+                    info.el.setAttribute("data-toggle", 'tooltip');
+                    info.el.setAttribute("data-placement", 'top');
+                    info.el.setAttribute("data-title", info.event.extendedProps.description);
+                },
+                locale: 'es',
+                height: 270,
+                eventMouseEnter: function (mouseEnterInfo) {
+                    $(mouseEnterInfo.el).tooltip('show')
+                }, eventMouseLeave: function (mouseEnterInfo) {
+                    $(mouseEnterInfo.el).tooltip('hide')
+                },
+
+                handleWindowResize: true,
+                events: [
+                    {
+                        // {#title: 'Reporte 3T21',#}
+                        description: 'Reporte 3T21',
+                        start: '2021-10-28',
+                        display: 'background',
+                        backgroundColor: '#EB8705'
+                    }, {
+                        // {#title: 'Conferencia Telefónica 3T21 ',#}
+                        description: 'Conferencia Telefónica 3T21 ',
+                        start: '2021-10-29',
+                        display: 'background',
+                        backgroundColor: '#3DAE2B'
+                    }
+
+                ]
+            });
+            calendar.render();
+        }
+    });
+
+</script>

@@ -183,7 +183,9 @@
 
 
   .mySwiper {
-    height: 500px;
+    top: auto !important;
+    margin-bottom: auto !important;
+    height: calc(100vh - 80px) !important;
   }
 
 

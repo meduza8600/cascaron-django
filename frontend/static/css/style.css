@@ -4,6 +4,10 @@
 
 main {
   margin-top: 3.5rem !important; }
+  main #slider-index {
+    top: auto !important;
+    margin-bottom: auto !important;
+    height: calc(100vh - 80px) !important; }
 
 .navbar a, .navbar .nav-link {
   color: #ffff !important; }

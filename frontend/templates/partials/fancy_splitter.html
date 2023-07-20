@@ -1,0 +1,159 @@
+{% load i18n %}
+{% load static %}
+<!-- Demo styles -->
+<style>
+    /*needs part of css in style.css #logos-section-modal */
+    .push-panel {
+        width: 100%;
+        height: auto;
+        -webkit-transition: .5s .5s;
+        transition: .5s .5s
+    }
+
+    .push-panel .original {
+        width: 50%;
+        height: auto;
+        padding: 2rem;
+        transition: width 1s;
+    }
+
+    .push-panel .extended {
+        padding: 2rem;
+        width: 70%;
+        transition: width 1s;
+    }
+
+    .push-panel .reduced {
+        width: 30%;
+        padding: 2rem;
+        transition: width 1s;
+    }
+
+    #left-side, #left-side h2 {
+        background-color: #003057;
+        color: white !important;
+    }
+
+    #right-side, #right-side h2 {
+        background-color: #e0ecf6;
+        color: black !important;
+    }
+
+    #rigth-btn {
+        margin-left: -2rem;
+        width: 50px;
+        height: 100px;
+        background: white;
+        -moz-border-radius: 0 100px 100px 0;
+        -webkit-border-radius: 0 100px 100px 0;
+        border-radius: 0 100px 100px 0;
+        border-color: transparent !important;
+    }
+
+    #left-btn {
+        margin-right: -2rem;
+        width: 50px;
+        height: 100px;
+        background: white;
+        -moz-border-radius: 100px 0 0 100px;
+        -webkit-border-radius: 100px 0 0 100px;
+        border-radius: 100px 0 0 100px;
+        border-color: transparent !important;
+    }
+
+
+</style>
+<div class="container-fluid my-5">
+    <h1 class="text-center tc-blue my-5">
+        Fancy splitter
+    </h1>
+    <div class="d-flex flex-row push-panel">
+        <div id="left-side" class="d-flex flex-row  align-content-center original">
+            <div class="left-side-body push-panel-body d-flex flex-column justify-content-center align-content-center ">
+                <h2 class="">
+                    Left side title.
+                </h2>
+                <p class="text-justify">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, blanditiis?
+                </p>
+                <ul class="list-unstyled">
+                    <li>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto asperiores dicta doloremque dolorum facilis nesciunt!
+                    </li>
+                    <li>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, in!
+                    </li>
+                    <li>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At earum fuga magni perferendis.
+                    </li>
+                </ul>
+            </div>
+            <div class="left-side-btn d-flex flex-column justify-content-center align-content-end ">
+                <button id="left-btn" class="fa fa-arrow-left fa-1x"></button>
+            </div>
+        </div>
+        <div id="right-side"
+             class="d-flex flex-row  align-content-center  original">
+            <div class="right-side-btn d-flex flex-column justify-content-center align-content-end">
+                <button id="rigth-btn" class="fa fa-arrow-right fa-1x"></button>
+            </div>
+            <div class="right-side-body push-panel-body d-flex flex-column justify-content-center align-content-center ">
+                <h2 class="">
+                    Right side title
+                </h2>
+                <p class="text-justify">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, sint.
+                </p>
+                <ul class="list-unstyled">
+                    <li>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, rerum!
+                    </li>
+                    <li>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid dolorum enim nisi optio.
+                    </li>
+                    <li>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab cum dolores dolorum earum maxime sunt?
+                    </li>
+                    <li>
+                        Lorem ipsum dolor sit amet, consectetur.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    $("#rigth-btn").click(function () {
+        if ($("#left-side").hasClass("extended")) {
+
+        } else if ($("#left-side").hasClass("original")) {
+            $("#left-side").removeClass("original");
+            $("#left-side").addClass("extended");
+            $("#right-side").removeClass("original");
+            $("#right-side").addClass("reduced");
+        } else {
+            $("#left-side").removeClass("reduced");
+            $("#left-side").addClass("original");
+            $("#right-side").removeClass("extended");
+            $("#right-side").addClass("original");
+        }
+    });
+    $("#left-btn").click(function () {
+        if ($("#right-side").hasClass("extended")) {
+
+        } else if ($("#right-side").hasClass("original")) {
+            $("#right-side").removeClass("original");
+            $("#right-side").addClass("extended");
+            $("#left-side").removeClass("original");
+            $("#left-side").addClass("reduced");
+        } else {
+            $("#right-side").removeClass("reduced");
+            $("#right-side").addClass("original");
+            $("#left-side").removeClass("extended");
+            $("#left-side").addClass("original");
+        }
+    });
+</script>

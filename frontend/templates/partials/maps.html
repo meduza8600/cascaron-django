@@ -1,0 +1,149 @@
+{% load i18n %}
+{% load static %}
+<!-- Demo styles -->
+<style>
+    /*needs part of css in style.css #maps */
+    .st0 {
+        fill: #66BAEB;
+        stroke: #025D97;
+        stroke-width: 0.5;
+        content: "\f041";
+        cursor: pointer;
+
+    }
+
+    .mapa .active {
+        fill: #025D97;
+        stroke: #025D97;
+        stroke-width: 0.9;
+    }
+
+    .st1 {
+        fill: #E0E0E0;
+        stroke: #025D97;
+        stroke-width: 0.5;
+    }
+
+    .st2 {
+        fill: #E0E0E0;
+        stroke: #FFFFFF;
+        stroke-width: 0.75;
+    }
+
+    .st4 {
+        fill: #0c5460;
+        stroke: #0c5460;
+        stroke-width: 0.75;
+    }
+
+    .st3 {
+        stroke: white;
+        fill: none;
+        cursor: pointer;
+    }
+
+    .propiedades-circle {
+        border-style: dashed;
+        border-color: #025D97;
+        padding: 0.5rem;
+        text-align: center;
+    }
+
+    #propiedades-circle h4, #propiedades-circle h3 {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    #propiedades-circle ul {
+        margin-bottom: 0.5rem;
+    }
+</style>
+<article class="s-block my-5">
+    <div class="container-fluid container-relative mapa">
+        <h1 class="text-center my-5">
+            Maps
+        </h1>
+        <div class="row d-flex align-items-center">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-5 col-11 mt-5 mt-md-0">
+                <div class="" data-wow-duration="1.5s">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Adobe Illustrator 25.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    {% include 'partials/maps-layer.html' %}
+                </div>
+            </div>
+            <div class="col-md-6" style="align-self: flex-start">
+                <div id="propiedades-circle" class="propiedades-circle">
+                    <div>
+                        <h3 id="propiedades-state"></h3>
+                        <div id="propiedades-text"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+<script src="{% static 'js/maps-states-mx.js' %}"></script>
+
+<script>
+    $(window).on('load', function () {
+
+        $("#propiedades-circle").attr("style", "opacity:0;left:100px");
+
+        let divText = $("#propiedades-text");
+        divText.empty();
+        let state = mxStates['MEX2712'];
+        $("#propiedades-circle").attr("style", "opacity:1;left:-40px");
+        $("#propiedades-state").text(state.name);
+        let list = state.list;
+        if (list.length) {
+            for (let i of list) {
+                divText.append('<h4>' + i.title + '</h4>');
+                if (i.items.length) {
+                    let ul = '<ul class="list-group list-unstyled">';
+                    for (let j of i.items) {
+                        ul += '<li class="list-unstyled">' + j + '</li>';
+                    }
+                    ul += '</ul>';
+                    divText.append(ul);
+                }
+            }
+        }
+
+        $("path.st0, path.st3")
+            .click(function () {
+                let id = $(this).attr("id") ?? $(this).data("id");
+
+                {
+
+                }
+                $('path.active').removeClass('active');
+                $("#" + id).attr("class", "st0 active");
+
+                $("#propiedades-circle").attr("style", "opacity:1;left:-40px");
+                {
+                    $("#propiedades-state").text($(this).attr("name"));
+
+                }
+                $("#propiedades-state").text(mxStates[id].name);
+
+                let divText = $("#propiedades-text");
+                divText.empty();
+                let list = mxStates[id].list;
+                if (list.length) {
+                    for (let i of list) {
+                        divText.append('<h4>' + i.title + '</h4>');
+                        if (i.items.length) {
+                            let ul = '<ul class="list-group list-unstyled">';
+                            for (let j of i.items) {
+                                ul += '<li class="list-unstyled">' + j + '</li>';
+                            }
+                            ul += '</ul>';
+                            divText.append(ul);
+                        }
+                    }
+                }
+            })
+    });
+</script>

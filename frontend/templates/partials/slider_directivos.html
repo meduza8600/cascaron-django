@@ -62,24 +62,41 @@
         </div>
     </div>
 <script>
-    var swiper = new Swiper(".mySwiper", {
-        speed: 600,
-        parallax: true,
-        spaceBetween: 30,
-        centeredSlides: true,
-        loop: true,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            type: "progressbar",
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
+    var swiper = new Swiper(".swiper-contact", {
+         slidesPerView: 4,
+          speed: 600,
+          parallax: true,
+          loop: true,
+          grabCursor: true,
+          spaceBetween: 1,
+          breakpoints: {
+              1181: {
+                  slidesPerView: 4
+              },
+              1180: {
+                  slidesPerView: 3
+              },
+              1020: {
+                  slidesPerView: 2
+              },
+              700: {
+                  slidesPerView: 1
+              }
+          },
+          // centeredSlides: true,
+          // autoplay: {
+          //     delay: 2500,
+          //     disableOnInteraction: false,
+          // },
+          // pagination: {
+          //     el: ".swiper-pagination",
+          //     type: "progressbar",
+          // },
+          navigation: {
+             nextEl: "#js-next1",
+              prevEl: "#js-prev1",
+          },
 
-    });
+      });
+
 </script>

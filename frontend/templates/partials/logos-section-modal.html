@@ -1,0 +1,172 @@
+{% load i18n %}
+{% load static %}
+<!-- Demo styles -->
+<style>
+    /*needs part of css in style.css #logos-section-modal */
+
+    .logos-section-modal {
+        background-position: center;
+        background-size: cover;
+        min-height: 285px;
+        width: 100%;
+        padding: 30px;
+        border-radius: 50px;
+    }
+
+    .brw {
+        border-right: 2px solid white;
+    }
+
+    .bbw {
+        border-bottom: 2px solid white;
+    }
+
+    .icon_container {
+        background-position: center center;
+        background-size: contain;
+        min-height: 150px;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        /*{#padding-top: 120px;#}*/
+    }
+
+    .icon_container .h4 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .icon_container:hover {
+        background-color: #003057;
+        border-radius: 4px;
+        animation: right-animate2 0.5s ease-in;
+        animation-fill-mode: forwards;
+    }
+</style>
+<article id="downloadv2">
+    <div class=" resized pl-0">
+        <div class="row">
+            <div class="col-12 mb-5  pb-4 mt-5 pt-4">
+                <div class="logos-section-modal border-radius-30"
+                     style="background-image:url('{% static 'img/parallax/5.jpg' %}') ">
+                    <div class="row">
+                        <div class="col-md-6 brw bbw p-0">
+                            <div class="content p-3 item-hover">
+                                <div class="icon_container img-bg">
+                                    <a class="h4 text-white text-center modal-event"
+                                       href="#"
+                                       data-toggle="modal"
+                                       data-target="#myModal"
+                                       data-title="Lorem ipsum title1"
+                                       data-img="{% static 'img/logos/bootstrap-logo.svg' %}"
+                                       data-description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, tempore."
+                                    >
+                                                <span class="event-title">
+                                                    Lorem ipsum title1.
+                                                </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 bbw p-0">
+                            <div class="content p-3 item-hover">
+                                <div class="icon_container img-bg">
+                                     <a class="h4 text-white text-center modal-event"
+                                       href="#"
+                                       data-toggle="modal"
+                                       data-target="#myModal"
+                                       data-title="Lorem ipsum title2"
+                                       data-img="{% static 'img/logos/bootstrap-logo.svg' %}"
+                                       data-description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, tempore."
+                                    >
+                                                <span class="event-title">
+                                                    Lorem ipsum title2.
+                                                </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 brw p-0">
+                            <div class="content p-3 item-hover">
+                                <div class="icon_container img-bg">
+                                    <h4 class="text-white mb-0"></h4>
+                                     <a class="h4 text-white text-center modal-event"
+                                       href="#"
+                                       data-toggle="modal"
+                                       data-target="#myModal"
+                                       data-title="Lorem ipsum title3"
+                                       data-img="{% static 'img/logos/bootstrap-logo.svg' %}"
+                                       data-description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, tempore."
+                                    >
+                                                <span class="event-title">
+                                                    Lorem ipsum title3.
+                                                </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 p-0">
+                            <div class="content p-3 item-hover">
+                                <div class="icon_container img-bg">
+                                     <a class="h4 text-white text-center modal-event"
+                                       href="#"
+                                       data-toggle="modal"
+                                       data-target="#myModal"
+                                       data-title="Lorem ipsum title4"
+                                       data-img="{% static 'img/logos/bootstrap-logo.svg' %}"
+                                       data-description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, tempore."
+                                    >
+                                                <span class="event-title">
+                                                    Lorem ipsum title4.
+                                                </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</article>
+<div class="modal fade popup" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="event-title card-title mb-0 text-center text-bold tc-blue mt-5 mb-5">
+                    </h2>
+                    <p class="event-description card-text mt-5 text-justify">
+                    </p>
+                    <img class="cover event-img" src="">
+                </div>
+            </div>
+            <div class="text-center py-3">
+                <button type="button" class="btn btn-secondary close-btn card-link" data-mdb-dismiss="modal">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(".modal-event").click(function (e) {
+        e.preventDefault();
+        let target = $(e.currentTarget);
+
+        $("#myModal .event-title").text(target.data('title'));
+        $("#myModal .event-description").text(target.data('description'));
+        $("#myModal .event-img").attr('src', target.data('img'));
+
+        $("#myModal").modal('show');
+    });
+    $("#myModal .close-btn").click(function (e) {
+        $("#myModal").modal('hide');
+    });
+</script>

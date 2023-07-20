@@ -1,0 +1,105 @@
+{% load i18n %}
+{% load static %}
+<!-- Demo styles -->
+<style>
+    /*needs part of css in style.css #colapsible_custom */
+    #interest-group .card {
+        border: none;
+    }
+
+    #colapsible_custom article {
+        display: none;
+        {#background: rgb(26, 28, 32);#}
+    }
+
+    #colapsible_custom article img {
+        {#padding: 0 15vw;#}
+    }
+</style>
+<div class="container my-5">
+    <h1 class="text-center">
+        Acordeón Personalizado por grupos
+    </h1>
+    <p class="text-justify">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores deleniti, doloremque ipsum minus quam
+        sequi. Adipisci impedit incidunt laboriosam nesciunt.
+    </p>
+    <div id="interest-group" class="row m-5">
+        <div class="col">
+            <a href="#" class="card">
+                <img class="card-img-top" data-art="lorem-ipsum1"
+                     src="{% static 'img/logos/bootstrap-logo.svg' %}" alt="Card image cap">
+            </a>
+        </div>
+        <div class="col">
+            <a href="#" class="card">
+                <img class="card-img-top" data-art="lorem-ipsum2"
+                     src="{% static 'img/logos/bootstrap-logo.svg' %}" alt="Card image cap">
+            </a>
+        </div>
+        <div class="col">
+            <a href="#" class="card">
+                <img class="card-img-top" data-art="lorem-ipsum3"
+                     src="{% static 'img/logos/bootstrap-logo.svg' %}" alt="Card image cap">
+            </a>
+        </div>
+        <div class="col">
+            <a href="#" class="card">
+                <img class="card-img-top" data-art="lorem-ipsum4"
+                     src="{% static 'img/logos/bootstrap-logo.svg' %}" alt="Card image cap">
+            </a>
+        </div>
+        <div class="col">
+            <a href="#" class="card">
+                <img class="card-img-top" data-art="lorem-ipsum5"
+                     src="{% static 'img/logos/bootstrap-logo.svg' %}" alt="Card image cap">
+            </a>
+        </div>
+        <div class="col">
+            <a href="#" class="card">
+                <img class="card-img-top" data-art="lorem-ipsum6"
+                     src="{% static 'img/logos/bootstrap-logo.svg' %}" alt="Card image cap">
+            </a>
+        </div>
+    </div>
+    <article id="lorem-ipsum1" class="">
+        <img class="card-img-top" src="{% static 'img/parallax/1.jpg' %}"
+             alt="Card image cap">
+    </article>
+    <article id="lorem-ipsum2" class="">
+        <img class="card-img-top" src="{% static 'img/parallax/2.jpg' %}"
+             alt="Card image cap">
+    </article>
+    <article id="lorem-ipsum3" class="">
+        <img class="card-img-top" src="{% static 'img/parallax/3.jpg' %}"
+             alt="Card image cap">
+    </article>
+    <article id="lorem-ipsum4" class="">
+        <img class="card-img-top" src="{% static 'img/parallax/4.jpg' %}"
+             alt="Card image cap">
+    </article>
+    <article id="lorem-ipsum5" class="">
+        <img class="card-img-top" src="{% static 'img/parallax/5.jpg' %}"
+             alt="Card image cap">
+    </article>
+    <article id="lorem-ipsum6" class="">
+        <img class="card-img-top" src="{% static 'img/parallax/6.jpg' %}"
+             alt="Card image cap">
+    </article>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $('#interest-group .card').on('click', e => {
+            e.preventDefault();
+            let art = $('#' + $(e.target).data('art'));
+            if (art.is(":hidden")) {
+                $('#colapsible_custom article').hide();
+                art.fadeIn();
+            } else {
+                art.fadeOut();
+            }
+        })
+    })
+</script>

@@ -17,59 +17,62 @@
 </section>
 
 <!--nosotros-->
-<section id="us" class="wow fadeIn" data-wow-duration="2s" data-wow-delay="3s">
+<section id="us" class="wow fadeIn" data-wow-duration="2s">
     {% include 'partials/slider_directivos.html' %}
 </section>
-<section id="countto" class="wow fadeIn countto" data-wow-duration="2s" data-wow-delay="3s">
+<section id="countto" class="wow fadeIn countto" data-wow-duration="2s">
     {% include 'partials/count_to.html' %}
 </section>
-<section id="reporte" class="wow fadeIn" data-wow-duration="2s" data-wow-delay="3s">
+<section id="reporte" class="wow fadeIn" data-wow-duration="2s">
     {% include 'partials/calendario.html' %}
 </section>
+<section id="colapsible_custom" class="py-1" data-wow-duration="2s">
+        {% include 'partials/colapsible_custom.html' %}
+</section>
+
 <!--contacto-->
-<section id="contact" class="wow fadeIn" data-wow-duration="2s" data-wow-delay="3s"
-         style="background-image: url({% static 'img/fondo-prueba-1.png'%}); background-size: cover; background-position: center">
+<section id="contact" class="wow fadeIn" data-wow-duration="2s"  style="background-image: url({% static 'img/fondo-prueba-1.png'%}); background-size: cover; background-position: center">
     {% include 'partials/contactos.html' %}
 
 </section>
 
 <script>
-    var swiper = new Swiper(".swiper-contact", {
-        slidesPerView: 4,
-        speed: 600,
-        parallax: true,
-        loop: true,
-        grabCursor: true,
-        spaceBetween: 1,
-        breakpoints: {
-            1181: {
-                slidesPerView: 4
-            },
-            1180: {
-                slidesPerView: 3
-            },
-            1020: {
-                slidesPerView: 2
-            },
-            700: {
-                slidesPerView: 1
-            }
-        },
-        // centeredSlides: true,
-        // autoplay: {
-        //     delay: 2500,
-        //     disableOnInteraction: false,
-        // },
-        // pagination: {
-        //     el: ".swiper-pagination",
-        //     type: "progressbar",
-        // },
-        navigation: {
-            nextEl: "#js-next1",
-            prevEl: "#js-prev1",
-        },
-
-    });
+    // var swiper = new Swiper(".swiper-contact", {
+    //     slidesPerView: 4,
+    //     speed: 600,
+    //     parallax: true,
+    //     loop: true,
+    //     grabCursor: true,
+    //     spaceBetween: 1,
+    //     breakpoints: {
+    //         1181: {
+    //             slidesPerView: 4
+    //         },
+    //         1180: {
+    //             slidesPerView: 3
+    //         },
+    //         1020: {
+    //             slidesPerView: 2
+    //         },
+    //         700: {
+    //             slidesPerView: 1
+    //         }
+    //     },
+    //     // centeredSlides: true,
+    //     // autoplay: {
+    //     //     delay: 2500,
+    //     //     disableOnInteraction: false,
+    //     // },
+    //     // pagination: {
+    //     //     el: ".swiper-pagination",
+    //     //     type: "progressbar",
+    //     // },
+    //     navigation: {
+    //         nextEl: "#js-next1",
+    //         prevEl: "#js-prev1",
+    //     },
+    //
+    // });
     var wow = new WOW(
         {
             boxClass: 'wow',      // animated element css class (default is wow)

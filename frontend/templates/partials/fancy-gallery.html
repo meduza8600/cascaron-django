@@ -1,0 +1,116 @@
+{% load i18n %}
+{% load static %}
+
+{######## requires #####}
+{#bootstrap v4 o ++#}
+{#css fancy-gallery.min.css#}
+{#js jquery.twbsPagination.min.js#}
+{#js fancy-gallery.js#}
+{#data eventos.json upload from views.py#}
+
+<link rel="stylesheet" href="{% static 'css/fancy-gallery.min.css' %}">
+
+<div class="container-fluid my-5">
+    <h1 class="text-center my-2">
+        Fancy Gallery
+    </h1>
+    <div class="d-flex justify-content-end align-items-center">
+        <div class="form-inline2 d-flex flex-row justify-content-end align-items-center">
+            <h3 class="">Filtrar por:</h3>
+            <select class="form-control form-control-sm mr-3" name="select_category" id="select_category">
+                <option value="all">Todas</option>
+                <option value="eventos_category1">eventos_category1</option>
+                <option value="eventos_category2">eventos_category2</option>
+                <option value="eventos_category3">eventos_category3</option>
+            </select>
+            <h3 class="">Año</h3>
+            <select class="form-control form-control-sm" name="select_anno" id="select_anno">
+                <option value="all">Todo</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+            </select>
+        </div>
+
+    </div>
+    <div class="events-list my-3 mx-3">
+        <div class="row">
+            {% for event in eventos %}
+                <article class="col-md-4 event-item all show-event py-1 px-1"
+                         data-date="{{ event.date }}"
+                         data-category="{{ event.category }}">
+                    <div class="image_wrapper2">
+                        <a href="#"
+                           class="banner_page modal-galery"
+                           data-mdb-toggle="modal"
+                           data-mdb-target="#GaleryModal1"
+                           data-img="{% static event.img %}"
+                           data-title="{{ event.title }}"
+                           data-url="{{ event.url }}"
+                           data-category="{{ event.category }}"
+                           data-description="{{ event.description }}"
+                           data-date="{{ event.date }}">
+                            <img src="{% static event.img %}" width="100%" class="cover">
+                            <div class="overlay">
+                                <div class="bg-overlay position-absolute w-100 h-100"></div>
+                                <h4 class="event-title-over text-white">
+                                    {{ event.title }}
+                                </h4>
+                                <div class="overlay_3">
+                                    <h4 class="event-title-over text-white">
+                                        {{ event.title }}
+                                    </h4>
+                                    <p class="text-white description">{{ event.description }}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+            {% endfor %}
+            <article id="no-event" class="col-md-3 event-item hide-event">
+                <h3 class="mb-0 uppercase">
+                    No hay noticias.
+                </h3>
+            </article>
+        </div>
+    </div>
+    <div id="paginationholder" class="mb-3 mb-lg-0 d-flex justify-content-end">
+        <ul id="pagination" class="pagination-lg"></ul>
+    </div>
+</div>
+<div class="modal fade popup" id="GalleryModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="card">
+                <div class="card-body">
+                    <img class="cover event-img" src="">
+                    <iframe class="event-url"
+                            width="100%" height="auto" src="" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen style="min-height: 400px">
+
+                    </iframe>
+                    <h4 class="event-title card-title my-2">
+                    </h4>
+                    <i class="fa fa-calendar"></i>
+                    <span class="event-date">
+                    </span>
+                    <i class="fa fa-folder"></i>
+
+                    <span class="event-category">
+                    </span>
+                    <p class="event-description card-text my-5">
+                    </p>
+                </div>
+            </div>
+            <div class="text-center py-3">
+                <button type="button" class="btn btn-danger close-btn card-link" data-mdb-dismiss="modal">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'js/jquery.twbsPagination.min.js' %}"></script>
+<script src="{% static 'js/fancy-gallery.js' %}"></script>

@@ -1,4 +1,4 @@
-# cerebrum
+# Cascaron
 Cascaron de Django, datos de ejemplo V 1.1
 
 ###Tecnologías

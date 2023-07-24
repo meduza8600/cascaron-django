@@ -7,5 +7,6 @@ from django.contrib.sitemaps.views import sitemap
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('noticias', views.noticias, name='noticias'),
 
 ]

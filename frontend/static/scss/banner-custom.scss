@@ -1,0 +1,24 @@
+/******** custom scss for banner-custom partial on interior layout ******/
+/** Copyright 2023 The Meduz@ Authors **/
+
+//#page-title, #page-title h1, #primary-menu ul li > a {
+//  font-family: var(--font-family-elementia);
+//}
+
+#page-title {
+  /*padding: 480px 0 265px !important;*/
+  padding: 150px 0 140px !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat;
+  border: 0 !important;
+}
+
+#page-title.page-title-parallax {
+  background-position: 50% 0 !important;
+}
+
+#page-title {
+  background-position: center !important;
+}
+

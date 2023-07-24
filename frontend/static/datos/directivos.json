@@ -1,0 +1,38 @@
+{
+  "directivos": [
+    {
+      "name": "Directivo 1",
+      "position": "CEO",
+      "description": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, quos!</p>",
+      "img": "img/directivos/silueta-directivo.png"
+    },
+    {
+      "name": "Directivo 2",
+      "position": "CEO",
+      "description": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, quos!</p>",
+      "img": "img/directivos/silueta-directivo.png"
+    },
+    {
+      "name": "Directivo 3",
+      "position": "CEO",
+      "description": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, quos!</p>",
+      "img": "img/directivos/silueta-directivo.png"
+    },
+    {
+      "name": "Directivo 4",
+      "position": "CEO",
+      "description": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, quos!</p>",
+      "img": "img/directivos/silueta-directivo.png"
+    },
+    {
+      "name": "Directivo 5",
+      "position": "CEO",
+      "description": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, quos!</p>",
+      "img": "img/directivos/silueta-directivo.png"
+    }
+
+  ]
+}
+
+
+

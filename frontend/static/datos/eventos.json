@@ -76,5 +76,121 @@
       "category": "eventos_category3",
       "img": "img/parallax/9.jpg"
     }
+  ],
+  "events_rel": [
+    {
+      "year": "2023",
+      "events": [
+        {
+          "title": "Event 1",
+          "date": "01/01/2023",
+         "url": "www.ejemplo.com",
+          "description": ""
+        },
+        {
+          "title": "Event 2",
+          "date": "02/02/2023",
+         "url": "www.ejemplo.com",
+          "description": ""
+        },
+        {
+          "title": "Event 3",
+          "date": "03/03/2023",
+         "url": "www.ejemplo.com",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "year": "2022",
+      "events": [
+        {
+          "title": "Event 1",
+          "date": "04/04/2022",
+         "url": "www.ejemplo.com",
+          "description": ""
+        },
+        {
+          "title": "Event 2",
+          "date": "05/05/2022",
+         "url": "www.ejemplo.com",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "year": "2021",
+      "events": [
+        {
+          "title": "Event 1",
+          "date": "06/06/2021",
+         "url": "www.ejemplo.com",
+          "description": ""
+        },
+        {
+          "title": "Event 2",
+          "date": "07/07/2021",
+         "url": "www.ejemplo.com",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "year": "2020",
+      "events": [
+        {
+          "title": "Event 1",
+          "date": "06/06/2020",
+         "url": "www.ejemplo.com",
+          "description": ""
+        },
+        {
+          "title": "Event 2",
+          "date": "07/07/2020",
+         "url": "www.ejemplo.com",
+          "description": ""
+        },
+        {
+          "title": "Event 3",
+          "date": "08/08/2020",
+         "url": "www.ejemplo.com",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "year": "2019",
+      "events": [
+        {
+          "title": "Event 1",
+          "date": "06/06/2019",
+          "url": "files/event1-2019.pdf",
+          "description": ""
+        },
+        {
+          "title": "Event 2",
+          "date": "09/09/2019",
+          "url": "files/event1-2019.pdf",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "year": "2018",
+      "events": [
+        {
+          "title": "Event 1",
+          "date": "08/08/2018",
+          "url": "files/event1-2018.pdf",
+          "description": ""
+        },
+        {
+          "title": "Event 2",
+          "date": "10/10/2018",
+          "url": "files/event1-2018.pdf",
+          "description": ""
+        }
+      ]
+    }
   ]
 }

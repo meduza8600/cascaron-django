@@ -15,7 +15,7 @@
           content="{% trans 'site-name' %}">
     <!-- keywords -->
     <meta name="keywords"
-          content="{% trans 'keywords'%}">
+          content="{% trans 'keywords' %}">
     <!-- favicon -->
     <link rel="shortcut icon" href="{% static 'img/apple-touch-icon-57x57.png' %}">
     <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon-57x57.png' %}">
@@ -25,14 +25,14 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/meduz@-bootstrap-v5-theme.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/font-icons.min.css' %}">
-<!--    <link rel="stylesheet" type="text/css" href="{% static 'css/rs-plugin/settings.css' %}"/>-->
-<!--    <link rel="stylesheet" type="text/css" href="{% static 'css/rs-plugin/layers.css' %}"/>-->
-<!--    <link rel="stylesheet" type="text/css" href="{% static 'css/rs-plugin/navigation.css' %}"/>-->
-<!--    <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.min.css' %}{{ css_js_version }}"/>-->
+    <!--    <link rel="stylesheet" type="text/css" href="{% static 'css/rs-plugin/settings.css' %}"/>-->
+    <!--    <link rel="stylesheet" type="text/css" href="{% static 'css/rs-plugin/layers.css' %}"/>-->
+    <!--    <link rel="stylesheet" type="text/css" href="{% static 'css/rs-plugin/navigation.css' %}"/>-->
+    <!--    <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.min.css' %}{{ css_js_version }}"/>-->
     <link rel="stylesheet" type="text/css" href="{% static 'css/swiper-bundle.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/swiper-custom.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/animate.min.css' %}">
-<!--    <link rel="stylesheet" type="text/css" href="{% static 'css/fontawesome.min.css' %}">-->
+    <!--    <link rel="stylesheet" type="text/css" href="{% static 'css/fontawesome.min.css' %}">-->
 
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
 
@@ -41,13 +41,13 @@
     {% endblock %}
 
     <script type="text/javascript" src="{% static 'js/jquery_v3.3.1.js' %}"></script>
-<!--    <script type="text/javascript" src="{% static 'js/plugins.min.js' %}"></script>-->
-<!--    <script type="text/javascript" src="{% static 'js/functions.min.js' %}"></script>-->
+    <!--    <script type="text/javascript" src="{% static 'js/plugins.min.js' %}"></script>-->
+    <!--    <script type="text/javascript" src="{% static 'js/functions.min.js' %}"></script>-->
     <script type="text/javascript" src="{% static 'js/b5/bootstrap.js' %}"></script>
-<!--    <script type="text/javascript" src="{% static 'js/fontawesome.min.js' %}"></script>-->
-<!--    <script type="text/javascript" src="{% static 'js/revolution.min.js' %}"></script>-->
+    <!--    <script type="text/javascript" src="{% static 'js/fontawesome.min.js' %}"></script>-->
+    <!--    <script type="text/javascript" src="{% static 'js/revolution.min.js' %}"></script>-->
     <!-- setting -->
-<!--    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>-->
+    <!--    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>-->
     <script type="text/javascript" src="{% static 'js/swiper-bundle.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/wow.min.js' %}"></script>
 
@@ -55,23 +55,21 @@
 <body>
 <!-- start header -->
 {% block header %}
-{% include 'partials/header.html' %}
+    {% include 'partials/header.html' %}
 {% endblock %}
-<!-- end header -->
-<!-- start parallax hero section -->
 
-<!-- <button class="float d-none d-md-block showRightPush" id="showRightPush">
-    Customer Launch
-</button> -->
+{% block banner %}
+{% endblock %}
+
 <main class="">
-    {% block contenido %}
+    {% block content %}
 
     {% endblock %}
 </main>
 
 <!-- start footer -->
 {% block footer %}
-{% include 'partials/footer.html' %}
+    {% include 'partials/footer.html' %}
 {% endblock %}
 
 <!-- end footer -->
